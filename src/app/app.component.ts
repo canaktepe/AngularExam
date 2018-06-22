@@ -1,5 +1,5 @@
-import { Component, OnInit, NgModule, NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+// import {NgSpinningPreloader} from 'ng2-spinning-preloader';
 import * as $ from 'jquery';
 
 @Component({
@@ -9,7 +9,12 @@ import * as $ from 'jquery';
 })
 
 export class AppComponent implements OnInit {
+
+  // constructor(private ngSpinningPreloader: NgSpinningPreloader) {}
+
   ngOnInit(): void {
+    // this.ngSpinningPreloader.stop();
+
     $(".btn-toggle").click(function() {
       var wrapper = $('.wrapper');
       wrapper.toggleClass("closed")
