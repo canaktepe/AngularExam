@@ -3,6 +3,7 @@ html,
 body {
   height: 100%;
   font-family: 'Shadows Into Light', cursive !important;
+  font-size: 18px;
 }
 
 *:focus,
@@ -23,12 +24,14 @@ circle.logo-circle {
 .wrapper .side-bar {
   background-color: #000;
   padding: 0px;
-  -webkit-transition: width 0.3s ease-out;
-  -moz-transition: width 0.3s ease-out;
-  -o-transition: width 0.3s ease-out;
-  -ms-transition: width 0.3s ease-out;
-  transition: width 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
+
+
 
 .wrapper.closed .side-bar {
   -webkit-transition: width 0.3s ease-out;
@@ -39,8 +42,13 @@ circle.logo-circle {
 }
 
 .wrapper.closed .sidebar-nav {
-  display: none;
+  opacity: 0;
+  height: 0px;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
+
+
 
 .side-bar .btn-toggle {
   color: #fff;
@@ -54,7 +62,6 @@ circle.logo-circle {
   -ms-transition: left 0.3s ease-out;
   transition: left 0.3s ease-out;
   right:0px;
-  padding-top:15px;
 }
 
 .wrapper.closed .content-bar {
@@ -68,6 +75,10 @@ circle.logo-circle {
 .sidebar-nav {
   padding: 25px 0px;
   list-style: none;
+    -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  height: auto;
 }
 
 .sidebar-brand {
@@ -93,11 +104,11 @@ circle.logo-circle {
 
 .sidebar-nav li a:hover {
   background-color: #333;
-  -webkit-transition: background 0.3s linear;
-  -moz-transition: background 0.3s linear;
-  -o-transition: background 0.3s linear;
-  -ms-transition: background 0.3s linear;
-  transition: background 0.3s linear;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 
 @media (min-width:768px) {
@@ -123,11 +134,10 @@ circle.logo-circle {
   .wrapper .side-bar {
     background-color: #000;
     padding: 0px;
-    -webkit-transition: width 0.3s ease-out;
-    -moz-transition: width 0.3s ease-out;
-    -o-transition: width 0.3s ease-out;
-    -ms-transition: width 0.3s ease-out;
-    transition: width 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
   }
-  
 }
